@@ -1,0 +1,140 @@
+@charset "utf-8";
+/* 네비  */
+#upperSmallNav a {color: #000;}
+div#headerWrap ul > li > a {color: #000;}
+
+/* 로그인 */
+
+#check_sh{
+  color:red;
+}
+
+#loginWrap_sh{
+  width: 100%;
+  height: 100vh;
+}
+#login_sh{
+    width: 800px;
+    height: 80vh;
+    margin: 0 auto;
+    padding-top:190px
+}
+#login_sh h1{
+  text-align: center;
+  color:gray;
+  text-shadow: 2px 2px lightgray;
+}
+#listWrap_sh{
+  width: 600px;
+  height: 80vh;
+  margin:0 auto;
+  
+}
+#list_sh{
+
+
+}
+#list_sh li{
+  width: 450px;
+  height: 50px;
+  margin: 30px auto;
+  
+}
+#list_sh li span{
+  position:absolute;
+  top:-9999px;
+}
+#checkBox_sh li{
+  width: 100px;
+  height: 20px;
+  margin: 0 auto;
+  text-shadow: 1px 1px lightgray;
+}
+#checkBox_sh{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+input[type="text"]{
+  width: 450px;
+  height: 50px;
+  box-shadow: 5px 5px pink;
+}
+input[type="text"]::placeholder{
+  display:block;
+  color: black;
+  font-size: 20px;
+}
+input[type="password"]{
+  width: 450px;
+  height: 50px;
+  box-shadow: 5px 5px pink;
+}
+input[type="password"]::placeholder{
+  display:block;
+  color: black;
+  font-size: 20px;
+}
+input[type="checkbox"]{
+}
+input[type="button"]{
+  border:0;
+  background-color: pink;
+  border-radius: 5px;
+  width: 450px;
+  height: 50px;
+ 
+}
+#linkList_sh{
+  position:absolute;
+  top:535px;
+  display:flex;
+  left:50%;
+  transform:translate(-50%);
+
+
+}
+#linkList_sh a{
+display:block;
+text-align: center;
+width: 200px;
+height: 20px;
+
+}
+#alterLogin_sh{
+  width: 600px;
+  position:absolute;
+  top:570px;
+  display:flex;
+  justify-content: space-evenly;
+  left:50%;
+  transform:translate(-50%);
+
+}
+#alterLogin_sh div{
+text-align: center;
+width: 200px;
+height: 70px;
+}
+#naver_sh{
+border:2px solid green;
+background-color: green;
+color:white;
+text-align: center;
+line-height: 70px;
+
+}
+#kakao_sh{
+  border:yellow;
+  background-color: yellow;
+  color:black;
+  text-align: center;
+  line-height: 70px;
+
+}
+/* 푸터 */
+#footerWrap{
+  margin-top: -190px;
+}

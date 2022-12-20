@@ -1,0 +1,64 @@
+@charset "UTF-8";
+.mainslider {
+}
+.mainslider > #mainsliderBtn {
+  width: 100%;
+  position: absolute;
+  display : flex;
+  padding: 0 120px;
+  justify-content:space-between;
+  top : calc(50% - 30px);
+  z-index: 10;
+  opacity: 0.7;
+}
+.mainslider > #mainsliderBtn button {
+  height : 60px;
+  width : 60px;
+	padding: 0;
+  border: none;
+  text-indent: -9999px;
+  cursor : pointer;
+}
+.mainslider > #mainsliderBtn button:nth-child(2){
+
+}
+.mainslider > #mainsliderBtn button:nth-child(1){
+
+}
+
+#mainslide_btnPrev {
+  background: url('../image/left-arrow.png') no-repeat center / cover;
+}
+#mainslide_btnNext {
+  background: url('../image/right-arrow.png') no-repeat center / cover;
+}
+.page1_slides {
+  display: flex;
+  position: relative;
+  width : 100%;
+  height: 100vh;
+  top :0;
+  left : 0;
+}
+.page1_slides > li {
+  position: absolute;
+  width : 100%;
+  height : 100vh;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+.page1_1 {
+  background: url('../image/promo1.jpg') no-repeat center / cover;
+}
+.page1_2 {
+  background: url('../image/promo2.png') no-repeat center / cover;
+}
+.page1_3 {
+  background: url('../image/promo3.png') no-repeat center / cover;
+}
+.page1_4 {
+  background: url('../image/promo4.jfif') no-repeat center / cover;
+}
+.page1_slides li.active{
+  z-index:2;
+}

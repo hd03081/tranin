@@ -1,0 +1,99 @@
+@charset "utf-8";
+.page5 {
+  width: 100%;
+  height: 100vh;
+  background-color: #515151;
+}
+.page5 > div {
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+  transform: translateY(20%);
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 30px;
+  padding-top: 70px;
+  
+} 
+.page5 > div > div {
+  /* window width = 800px -> 반응형 */
+  min-width: 300px;
+}
+.Header_hj {
+  width: 100%;
+  margin: 30px 0;
+  color: #fff;
+}
+.Header_hj > span{ 
+  font-size: 35px;
+  border-bottom: 2px solid #ffa348;
+}
+.noticeUl_hj {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.noticeUl_hj li { 
+  width: 100%;
+  margin: 10px 10px;
+  padding: 10px 0;
+  border-top: 1px solid #ff5757;
+  border-bottom: 1px solid #ff5757;
+  display: flex;
+  justify-content: space-between;
+}
+.noticeUl_hj li p {
+  /* border: 1px solid #000; */
+  font-size: 20px;
+  color: #eeeeee;
+}
+.noticeUl_hj li p:first-of-type {
+  flex: 1;
+}
+.noticeUl_hj li p:nth-of-type(2){
+  flex: 7;
+}
+.noticeUl_hj li p:nth-of-type(3) {
+  flex: 2;
+}
+.noticeUl_hj li  a { 
+  color: #eeeeee;
+}
+.gopage_hj {
+  margin-top: 50px;
+  display: block;
+  width: 150px;
+  height: 50px;
+  background-color: #fd4848;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  line-height: 47px; 
+}
+#reportWrap_hj p {
+  font-size: 20px;
+  color: #fff;
+}
+#reportWrap_hj .reportExplan {
+  width: 100%;
+  height: 50%;
+}
+.reportExplan > div {
+  margin-top: 10px;
+  width: 80%;
+  height: 80%;
+  background: #aeaeae;
+  text-indent: -9999px;
+}
+/* .goReport_hj {
+  margin-top: 30px;
+  display: block;
+  width: 150px;
+  height: 50px;
+  background-color: #fd4848;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  line-height: 47px;
+} */

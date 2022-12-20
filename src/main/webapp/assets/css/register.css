@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+/* 네비  */
+#upperSmallNav a {color: #000;}
+div#headerWrap ul > li > a {color: #000;}
+
+/* 메인영역 */
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+#listWrap_sh{
+    width: 1200px;
+    height: 180vh;
+    margin: 25vh auto;
+    border:1px solid black;
+}
+#list_sh{
+
+}
+#forms_sh li{
+    width: 600px;
+    height: 50px;
+    border:1px solid red;
+    margin: 2vh auto;
+    text-align: center;
+}
+#forms_sh li span{
+    position:absolute;
+    top:99999px
+}
+input[type="text"]{
+    width: 300px;
+    height: 50px;
+}
+input[type="password"]{
+    width: 300px;
+    height: 50px;
+}
+input[type="number"]{
+    width: 120px;
+    height: 40px;
+}
+#sex{
+    width: 400px;
+    height: 50px;
+    display:flex;
+    margin: 0 auto;
+    border:1px solid purple;
+    justify-content: space-evenly;
+}
+
+#man{
+    width: 120px;
+    height: 40px;
+    background-color: lightblue;
+}
+#woman{
+    width: 120px;
+    height: 40px;
+    background-color: pink;
+}

@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+
+#upperSmallNavWrap {
+  width : 100%;
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  padding-top: 45px;
+}
+
+#upperSmallNav {
+  position: absolute;
+  left: 50%;
+  top:0px;
+  transform: translate(-15%, -50%);
+  width : 100%;
+  max-width : 50%;
+  height : 28px;
+  padding : 8px 0;
+  margin : 35px auto 0 auto;
+  background-color: #ffffff4d;
+  box-sizing: content-box;
+  z-index: 99;
+}
+
+#upperSmallNav a {
+  position: relative;
+  color: black;
+  font-weight: bold;
+  margin: 0 35px;
+  text-transform: uppercase;
+  float : right;
+}
+#headerWrap {
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+#header {
+  max-width: 1390px;
+  width: 100%;
+  height: 120px;
+  margin: 0 auto;
+  top: 0;
+  padding-top: 45px;
+}
+#header .logo {
+  position: absolute;
+  width: 157px;
+  height: 110px;
+  top : -15px;
+}
+#header .logo a {
+  position: absolute;
+  width : 100%;
+  height: 100%;
+  background: url('../image/mainLogo.png') no-repeat center / cover;
+  display: block;
+  text-indent: -4000px;
+  top : -20px;
+}
+  /* gnb */
+#gnbList {
+    display: flex;
+    justify-content: right;
+    height: 35px;
+    padding-left: 70px;
+    padding-top: 4px;
+    z-index: 99;
+  }
+#gnbList > li {
+    padding: 0 50px;
+    font-size: 20px;
+    height: 35px;
+    font-weight: bold;
+  }
+#gnbList > li > ul {
+    display : none;
+    font-size: 16px;
+    width : calc(100% + 100px);
+    position: relative;
+    left : -50px;
+    text-align: center;
+  
+  }
+#gnbList > li > ul > li {
+    padding: 10px 0;
+  }
+#gnbList > li > ul > li > a {
+    color : black;
+    display : block;
+  }
+#gnbList > li:nth-child(3):hover,#gnbList > li:nth-child(3):hover ul,
+#gnbList > li:nth-child(4):hover,#gnbList > li:nth-child(4):hover ul {
+    background: white;
+  }
+#gnbList > li:nth-child(3):hover ul,#gnbList > li:nth-child(4):hover ul{
+    display : block;
+  }
+#gnbList > li:nth-child(3):hover a,#gnbList > li:nth-child(4):hover a {
+    color : black;
+  }
+#gnbList > li > a {
+    display: block;
+    height: 35px;
+  }
