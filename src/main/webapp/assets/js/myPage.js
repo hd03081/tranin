@@ -6,6 +6,7 @@ const myPageMyActivityLeftNav = document.querySelector("#myPageMyActivityLeftNav
 const myPageMyActivityLeftNavLi = document.querySelectorAll("#myPageMyActivityLeftNav li");
 const myPageTab = document.querySelectorAll("#myPageTab li");
 const myPageFavoriteUl = document.querySelector("#myPageFavorite ul");
+const myPageMemberOutInnerWrap = document.querySelector("#myPageMemberOutInnerWrap input");
 const myPageMemberOutBtn = document.querySelector("#myPageMemberOutBtn");
 const myPageMemberBannedListBtns = document.querySelectorAll("#myPageMemberBannedList input");
 const myPageAdminInnerTab = document.querySelectorAll("#myPageAdminInnerTab section");
@@ -97,18 +98,21 @@ for(let i=0;i<myPageMyActivityLeftNavLi.length;i++){
     myPageMyActivityLeftNavLi[i].classList.add("enabled");
   });
 }
-myPageFavoriteUl.addEventListener('scroll',function(){
-  if( myPageFavoriteUl.scrollTop === (myPageFavoriteUl.scrollHeight - myPageFavoriteUl.offsetHeight)){
-    console.log(myPageFavoriteUl.scrollTop+"ajax 발동");
-    let li = document.createElement("li")
-    myPageFavoriteUl.append(li);
-  }
-});
+if(myPageFavoriteUl!=null){
+	myPageFavoriteUl.addEventListener('scroll',function(){
+	  if( myPageFavoriteUl.scrollTop === (myPageFavoriteUl.scrollHeight - myPageFavoriteUl.offsetHeight)){
+	    console.log(myPageFavoriteUl.scrollTop+"ajax 발동");
+	    let li = document.createElement("li")
+	    myPageFavoriteUl.append(li);
+	  }
+	});
+}
 myPageMemberOutBtn.addEventListener('click',function(){
   let isExecuted = confirm("정말 탈퇴하시겠습니까?");
   if(isExecuted==true){
     console.log("탈퇴 url로 보내기");
     console.log("그 후 메인화면으로 튕구기");
+    location.href = "memberOut?pw="+myPageMemberOutInnerWrap.value;
   } else {
     console.log("아무일없었다");
   }

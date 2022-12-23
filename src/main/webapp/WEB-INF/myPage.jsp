@@ -138,20 +138,54 @@
     <section id="myPageTab">
       <h2>마이페이지</h2>
       <ul>
-        <li class="active"><a>내 정보</a></li>
-        <li><a>내 활동</a></li>
-        <li><a>찜한 상품</a></li>
-        <li><a>장바구니</a></li>
-        <li><a>구매내역</a></li>
-        <li><a>탈퇴하기</a></li>
-        <li><a>차단하기</a></li>
-        <li><a>관리자페이지</a></li>
+        <li class="active"><a href="myPage?myPageCategory=0">내 정보</a></li>
+        <li><a href="myPage?myPageCategory=1">내 활동</a></li>
+        <li><a href="myPage?myPageCategory=2">찜한 상품</a></li>
+        <li><a href="myPage?myPageCategory=3">장바구니</a></li>
+        <li><a href="myPage?myPageCategory=4">구매내역</a></li>
+        <li><a href="myPage?myPageCategory=5">탈퇴하기</a></li>
+        <li><a href="myPage?myPageCategory=6">차단하기</a></li>
+        <li><a href="myPage?myPageCategory=7">관리자페이지</a></li>
         <!--jsp로 나중에 추가 <li><a href="">관리자 페이지</a></li> 누르면 아예 다른페이지로 이동하기-->
       </ul>
     </section>
     <!--탭누르면 카테고리별 파라미터 받아서 알맞은 myPageContent보여주기 -->
     <section id="myPageContent">
-
+	<%
+		if(request.getAttribute("myPageParam").equals("0")){
+	%>
+		<jsp:include page="/WEB-INF/myPageTemplate/myPageMyInfo.jsp" />		
+	<%	
+		} else if(request.getAttribute("myPageParam").equals("1")){
+	%>
+		<jsp:include page="/WEB-INF/myPageTemplate/myPageMyActivity.jsp" />	
+	<%	
+		} else if(request.getAttribute("myPageParam").equals("2")){
+	%>
+		<jsp:include page="/WEB-INF/myPageTemplate/myPageMyFavorite.jsp" />	
+	<%	
+		} else if(request.getAttribute("myPageParam").equals("3")){
+	%>
+		<jsp:forward page="/WEB-INF/index.jsp" />	
+	<%	
+		} else if(request.getAttribute("myPageParam").equals("4")){
+	%>
+		<jsp:include page="/WEB-INF/myPageTemplate/myPageMyTransaction.jsp" />	
+	<%	
+		} else if(request.getAttribute("myPageParam").equals("5")){
+	%>
+		<jsp:include page="/WEB-INF/myPageTemplate/myPageMemberOut.jsp" />
+	<%	
+		} else if(request.getAttribute("myPageParam").equals("6")){
+	%>
+		<jsp:include page="/WEB-INF/myPageTemplate/myPageMemberBlock.jsp" />
+	<%
+		} else if(request.getAttribute("myPageParam").equals("7")){
+	%>
+		<jsp:include page="/WEB-INF/myPageTemplate/myPageAdmin.jsp" />
+	<%
+		}
+	%>
     </section>
     <div class="footerWrap page onePage6">
       <footer class="page8" id="footer">

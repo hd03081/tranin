@@ -35,4 +35,15 @@ public class MyPageDao {
 			e.printStackTrace();
 		}
 	}
+	
+	public void deleteMember(int no) {
+		DBProperty dbProperty = new DBProperty();
+		String sql = "DELETE FROM tranin_member WHERE no="+no;
+		try {
+			dbProperty.pstmt = dbProperty.conn.prepareStatement(sql);
+			dbProperty.pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 }

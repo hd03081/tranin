@@ -98,7 +98,7 @@ div#headerWrap ul > li > a {
   border : 1px solid white;
 }
 #myPageMyInfo,#myPageMyActivity, #myPageFavorite, #myPageBuyList, #myPageMemberOut, #myPageMemberBanned, #myPageAdmin {
-  display : none;
+  display : block;
 }
 #myPageAdmin {
   display : block;

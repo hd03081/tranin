@@ -19,6 +19,11 @@ public class MyPageController extends HttpServlet {
 		
 		response.setCharacterEncoding("utf-8");
 		response.setContentType("text/html");
+		String param = request.getParameter("myPageCategory");
+		if(param==null) {
+			param = "0";
+		}
+		request.setAttribute("myPageParam",param);
 		
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/myPage.jsp");
 		requestDispatcher.forward(request, response);
