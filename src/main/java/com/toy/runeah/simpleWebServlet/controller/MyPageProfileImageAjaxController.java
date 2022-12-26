@@ -43,8 +43,8 @@ public class MyPageProfileImageAjaxController extends HttpServlet {
 		req.setCharacterEncoding("utf-8");
 		
 		// 실제 서블릿이 동작하는 서버 경로 (Not 개발 서버)
-		String realPath = req.getServletContext().getRealPath("/assets/image");
-		
+		//String realPath = req.getServletContext().getRealPath("/assets/image");
+		String realPath = "c:\\upload";
 		// form 태그 중 name="myPageProfileAttach" 인 요청 파트
 		Part filePart = req.getPart("file");
 		
@@ -76,7 +76,7 @@ public class MyPageProfileImageAjaxController extends HttpServlet {
 			//데이터베이스에 파일이름 저장
 			MyPageDao dao = new MyPageDao();
 			SignDto dto = null;
-			dto = (SignDto) req.getSession().getAttribute("session_memberNo");
+			dto = (SignDto) req.getSession().getAttribute("session_member");
 			dao.modifyImageURL(savedName,dto.getMemberId());
 			PrintWriter out = resp.getWriter();
 			String filePath = realPath + savedName;

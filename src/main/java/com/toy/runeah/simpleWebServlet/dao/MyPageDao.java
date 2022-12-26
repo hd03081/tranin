@@ -36,6 +36,21 @@ public class MyPageDao {
 		}
 	}
 	
+	public void modifyMyPageInfo(int myPageMyInfoNo,String myPageMyInfoId,String myPageMyInfoPassword,
+			String myPageMyInfoName,String myPageMyInfoNickName,String myPageMyInfoSex,
+			String myPageMyInfoBirth,String myPageMyInfoPhone,String myPageMyInfoTel,
+			String myPageMyAddress,String myPageMyInfoAccountNo) {
+		DBProperty dbProperty = new DBProperty();
+		//UPDATE `runeah`.`tranin_member` SET `memberId`='ssss', `password`='ssss', `name`='aaaa', `nickname`='gdfd', `sex`='여성', `birthYear`='1212', `phone1`='4124124', `phone4`='412312', `address1`='ㄹㅇㅁㅇㄻㅇㄻㅇㄹ' WHERE  `no`=17;
+		String sql = "UPDATE tranin_member SET memberId='"+myPageMyInfoId+"', password='"+myPageMyInfoPassword+"', name='"+myPageMyInfoName+"', nickName='"+myPageMyInfoNickName+"', sex='"+myPageMyInfoSex+"', birthYear='"+myPageMyInfoBirth+"', phone1='"+myPageMyInfoPhone+"', phone4='"+myPageMyInfoTel+"', address1='"+myPageMyAddress+"' WHERE no="+myPageMyInfoNo;
+		try {
+			dbProperty.pstmt = dbProperty.conn.prepareStatement(sql);
+			dbProperty.pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public void deleteMember(int no) {
 		DBProperty dbProperty = new DBProperty();
 		String sql = "DELETE FROM tranin_member WHERE no="+no;
