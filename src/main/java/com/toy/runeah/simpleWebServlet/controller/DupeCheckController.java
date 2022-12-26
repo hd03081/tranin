@@ -13,13 +13,13 @@ import com.toy.runeah.simpleWebServlet.dao.SignDao;
 public class DupeCheckController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	SignDao dao = new SignDao();
 	
 	public DupeCheckController() {
         super();
     }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		SignDao dao = new SignDao();
 		response.setContentType("text/html; charset=UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		
