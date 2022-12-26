@@ -24,7 +24,7 @@ public class MyPageController extends HttpServlet {
 			param = "0";
 		}
 		request.setAttribute("myPageParam",param);
-		
+		System.out.println("asfd");
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/myPage.jsp");
 		requestDispatcher.forward(request, response);
 	}

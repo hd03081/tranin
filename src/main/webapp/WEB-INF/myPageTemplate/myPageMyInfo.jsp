@@ -7,9 +7,9 @@
 <section id="myPageMyInfo">
 	<form accept-charset="UTF-8" id="myPageMyInfoForm" action="myPageMyInfoModify" method="post">
 		<ul>
-			<li>아이디 : <input type="text" name="myPageMyInfoId" value="<%=loginSession.getMemberId()%>"></li>
-			<li>패스워드 : <input type="text" name="myPageMyInfoPassword" value="<%=loginSession.getPassword()%>"></li>
-			<li>패스워드 확인 : <input type="text" name="myPageMyInfoPasswordConfirm" value="<%=loginSession.getPassword()%>"></li>
+			<li>아이디 : <input type="text" disabled name="myPageMyInfoId" value="<%=loginSession.getMemberId()%>"></li>
+			<li>패스워드 : <input type="password" disabled name="myPageMyInfoPassword" value="<%=loginSession.getPassword()%>"></li>
+			<li>패스워드 확인 : <input type="password" autocomplete="off" name="myPageMyInfoPasswordConfirm" value=""></li>
 			<li>이름 : <input type="text" name="myPageMyInfoName" value="<%=loginSession.getName()%>"></li>
 			<li>별명 : <input type="text" name="myPageMyInfoNickName" value="<%=loginSession.getNickName()%>"></li>
 			<li>성별 : <input type="text" name="myPageMyInfoSex" value="<%=loginSession.getSex()%>"></li>

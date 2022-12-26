@@ -23,7 +23,7 @@ public class LoginFormController extends HttpServlet {
 		
 		response.setCharacterEncoding("utf-8");
 		response.setContentType("text/html");
-		
+		System.out.println("s");
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/login.jsp");
 		requestDispatcher.forward(request, response);
 	}

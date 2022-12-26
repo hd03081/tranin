@@ -64,7 +64,7 @@
           </div>
         </form>
         <div id="linkList_sh">
-        <a href="#">로그인/비밀번호 찾기</a>                
+        <a href="#">로그인/비밀번호 찾기s</a>                
         <a href="#">회원가입</a>    
       </div>   
       <div id="alterLogin_sh">

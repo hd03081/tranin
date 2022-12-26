@@ -39,6 +39,7 @@ public class MyPageInfoModifyController extends HttpServlet {
 		System.out.println("NO:"+myPageMyInfoNo);
 		System.out.println("이름:"+myPageMyInfoName);
 		System.out.println("별명:"+myPageMyInfoNickName);
+		System.out.println("비번:"+myPageMyInfoPassword);
 		System.out.println("비번확인:"+request.getParameter("myPageMyInfoPasswordConfirm"));
 		//패스워드확인 일치안하면 튕구기
 		if(myPageMyInfoPassword.equals(request.getParameter("myPageMyInfoPasswordConfirm"))) {

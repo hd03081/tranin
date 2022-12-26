@@ -4,17 +4,36 @@
 #upperSmallNav a {color: #000;}
 div#headerWrap ul > li > a {color: #000;}
 
-/* 메인영역 */
+#logo_sh{
+    width:250px;
+    height: 200px;
+    background-image: url(../image/mainLogo.png);
+    background-size: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
 
+/* 메인영역 */
+.check_sh{
+    width: 500px;
+    height: 10px;
+    color:red;
+    text-align: center;
+    margin: 0 auto;
+  }
+#title_sh{
+    text-align: center;
+  color:gray;
+  text-shadow: 2px 2px lightgray;
+}
 body{
     width: 100%;
     height: 100vh;
 }
 #listWrap_sh{
-    width: 1200px;
-    height: 180vh;
-    margin: 25vh auto;
-    border:1px solid black;
+    max-width: 1200px;
+    height: 170vh;
+    margin: 0 auto;
 }
 #list_sh{
 
@@ -22,42 +41,116 @@ body{
 #forms_sh li{
     width: 600px;
     height: 50px;
-    border:1px solid red;
-    margin: 2vh auto;
+    margin: 0 auto;
     text-align: center;
 }
 #forms_sh li span{
+    display: block;
     position:absolute;
-    top:99999px
+    text-indent:-9999px;
 }
 input[type="text"]{
     width: 300px;
     height: 50px;
+    box-shadow: 5px 5px pink;
+    padding: 0 10px;
 }
 input[type="password"]{
     width: 300px;
     height: 50px;
+    box-shadow: 5px 5px pink;
+    padding: 0px 10px;
+}
+#phoneCompany{
+    width: 120px;
+    height: 40px;
+    box-shadow: 5px 5px pink;
+    padding: 0 10px;
 }
 input[type="number"]{
     width: 120px;
     height: 40px;
+    box-shadow: 5px 5px pink;
+    padding: 0 10px;
+}
+input.phone {
+	width: 300px;
+}
+input::placeholder{
+    font-size: 12px;
+    color:lightgray;
 }
 #sex{
     width: 400px;
     height: 50px;
     display:flex;
     margin: 0 auto;
-    border:1px solid purple;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 50px;
 }
-
-#man{
-    width: 120px;
+#sex p {
+	width: 120px;
     height: 40px;
-    background-color: lightblue;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+#sex input[type="radio"] {
+	vertical-align: middle;
+	appearance: none;
+	position: absolute;
+	top: 0; left: 0;
+}
+#sex > p > span {
+	text-indent: 0;
+}
+#man{
+    background-color: rgb(128, 199, 223);
 }
 #woman{
-    width: 120px;
-    height: 40px;
+    background-color: rgb(255, 224, 229);
+}
+#dblCheck1{
+    display: block;
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    border: 1px solid grey;
+    margin: 0 auto;
+}
+#dblCheck2{
+    display: block;
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    border: 1px solid grey;
+    margin: 0 auto;
+}
+#dblCheck22{
+    display: block;
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    border: 1px solid grey;
+    margin: 0 auto;
+}
+#dblCheck3{
+    display: block;
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    border: 1px solid grey;
+    margin: 0 auto;
+}
+#dblCheck4{
+    display: block;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    border: 1px solid pink;
     background-color: pink;
+    margin: 0 auto;
 }
