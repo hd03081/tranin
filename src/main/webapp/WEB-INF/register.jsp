@@ -12,7 +12,9 @@
 	    <link rel="stylesheet" href="assets/css/common.css">
 	    <link rel="stylesheet" href="assets/css/register.css">
 	    <script src="https://spi.maps.daum.net/imap/map_js_init/postcode.v2.js"></script>
-	    <script src="assets/js/jquery-3.6.1.js"></script>
+	    <script type="text/javascript" src="assets/js/jquery-3.6.1.js"></script>
+		<script type="text/javascript" src="assets/js/jquery-migrate-1.4.1.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery-ui.js"></script>
 	    <script src="assets/js/register.js" defer></script>
 	</head>
 	<body>

@@ -51,7 +51,6 @@ hey.addEventListener('click', function(){
 const id = document.querySelector('#id_sh');
 const password = document.querySelector('#password_sh');
 const password_cf = document.querySelector('#password_cf');
-const name = document.querySelector('#name');
 const nickName = document.querySelector('#nickName');
 
 
@@ -59,7 +58,6 @@ const nickName = document.querySelector('#nickName');
 let id_sh = form.memberId.value;
 let password_sh = form.password.value;
 let password_cf_sh = form.password_cf.value;
-let name_sh = form.name.value;
 let nickName_sh = form.nickName.value;
 
 
@@ -231,29 +229,13 @@ $('form').submit(function(e){
             return false;
         }
 
-    
-
-        let name_sh = form.name.value;
-        if (name_sh == "") {
-            check4.innerText = "이름을 입력해주세요";
-            name.focus();
-            return false;
-        }
-        if (!regExpName.test(name_sh)) {
-            check4.innerText = "이름은 한글로만 지정 가능합니다.";
-            name.focus();
-            return false;
-        } 
-    
-
-
-        let nickName_sh = form.name.value;
+        let nickName_sh = form.nickName.value;
         if (nickName_sh == "") {
             check5.innerText = "별명을 입력해주세요";
             nickName.focus();
             return false;
         }
-        if (!regExpName.test(nickName_sh)) {
+        if (!regExpNickName.test(nickName_sh)) {
             check5.innerText = "별명은 한글,영문, 숫자로만 가능합니다..";
             nickName.focus();
             return false;
@@ -274,7 +256,7 @@ const checkIDBtn = document.getElementById("dblCheck1");
 const checkID = function(){
 	let userIDVal = form.memberId.value; // userID 값 가져오기
 		console.log(userIDVal);
-	xhr.open("POST", "./UserRegisterCheckServlet", true);
+	xhr.open("POST", "dupeCheck", true);
 	//xhr.setRequestHeader("인코딩?방식", ""); 
 	xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 	
@@ -284,7 +266,7 @@ const checkID = function(){
 		if(xhr.status == 200){ // 준완
 			let result = xhr.response;
 			console.log("result : " + result);
-			if(result == 1){ // 가입 가능한 회원
+			if(result == "1"){ // 가입 가능한 회원
 				alert("사용가능한 아이디입니다.");
 				checkID_State = true;
 			}

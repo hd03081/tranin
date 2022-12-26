@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="java.util.*,java.lang.*,com.toy.runeah.simpleWebServlet.dao.MainDao,com.toy.runeah.simpleWebServlet.dto.SignDto"%>
+    pageEncoding="UTF-8" import="java.util.*,java.lang.*,com.toy.runeah.simpleWebServlet.dao.MainDao,com.toy.runeah.simpleWebServlet.dto.MemberDto"%>
 <%@ taglib prefix="c"
            uri="http://java.sun.com/jstl/core_rt" %>
 <!DOCTYPE html>
@@ -29,7 +29,7 @@
   <div id="upperSmallNav">
     <h1 class="hidden">기타관련</h1>
     <%
-	SignDto loginSession = (SignDto)session.getAttribute("session_member");
+	MemberDto loginSession = (MemberDto)session.getAttribute("session_member");
     if(loginSession!=null){
     	out.print(
 				"<a>"+

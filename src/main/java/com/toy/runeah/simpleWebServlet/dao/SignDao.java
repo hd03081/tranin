@@ -1,5 +1,7 @@
 package com.toy.runeah.simpleWebServlet.dao;
 
+import java.sql.SQLException;
+
 import com.toy.runeah.simpleWebServlet.dto.MemberDto;
 
 public class SignDao {
@@ -36,5 +38,36 @@ public class SignDao {
 		}
 	}
 		return insertCount;
+	}
+	
+	public String dupeCheck(String id) {
+		try {
+			String sql = "SELECT id FROM tranin_member WHERE id='"+id+"'";
+			dbProperty.pstmt = dbProperty.conn.prepareStatement(sql);
+			dbProperty.rs = dbProperty.pstmt.executeQuery();
+			System.out.println(dbProperty.rs.first());
+			if(dbProperty.rs.first()==false) {
+				return "1";
+			}
+			
+		} catch (SQLException e) {
+			System.out.println("error: " + e);
+		} finally {
+			try {
+				if (dbProperty.rs != null) {
+					dbProperty.rs.close();
+				}
+				if (dbProperty.pstmt != null) {
+					dbProperty.pstmt.close();
+				}
+
+				if (dbProperty.conn != null && !dbProperty.conn.isClosed()) {
+					dbProperty.conn.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return "-1";
 	}
 }

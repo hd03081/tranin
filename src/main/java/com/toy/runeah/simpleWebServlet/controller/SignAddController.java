@@ -25,6 +25,7 @@ public class SignAddController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setCharacterEncoding("utf-8");
 		response.setContentType("text/html");
+		request.setCharacterEncoding("utf-8");
 		
 		String memberId = request.getParameter("memberId");
 		String password = request.getParameter("password");
@@ -35,8 +36,9 @@ public class SignAddController extends HttpServlet {
 		MemberDto memberDto = new MemberDto(memberId,password,nickName,address,zipCode);
 		dao.addMember(memberDto);
 		
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/index.jsp");
-		requestDispatcher.forward(request, response);
+		response.sendRedirect("/runeah/");
+		//RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/index.jsp");
+		//requestDispatcher.forward(request, response);
 	}
 
 }
