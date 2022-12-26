@@ -55,7 +55,7 @@
       <nav id="gnb">
         <h2 class="hidden">주요이용메뉴</h2>
         <ul id="gnbList">
-          <li class="gnbListChild"><a href="./sale.html">팝니다</a></li>
+          <li class="gnbListChild"><a href="./sale.jsp">팝니다</a></li>
           <li class="gnbListChild"><a href="#">삽니다</a></li>
           <li class="gnbListChild"><a href="#">커뮤니티</a>
             <ul class="snb">
