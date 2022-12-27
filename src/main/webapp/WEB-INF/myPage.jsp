@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="java.util.*,java.lang.*,com.toy.runeah.simpleWebServlet.dao.MainDao,com.toy.runeah.simpleWebServlet.dto.SignDto"%>
+    pageEncoding="UTF-8" import="java.util.*,java.lang.*,com.toy.runeah.simpleWebServlet.dao.MainDao,com.toy.runeah.simpleWebServlet.dto.MemberDto"%>
 <%@ taglib prefix="c"
            uri="http://java.sun.com/jstl/core_rt" %>
 <!DOCTYPE html>
@@ -25,9 +25,9 @@
   <body>
     <div id="upperSmallNav">
     <h1 class="hidden">기타관련</h1>
-    <%! SignDto loginSession; %>
+    <%! MemberDto loginSession; %>
     <%
-    loginSession = (SignDto)session.getAttribute("session_member");
+    loginSession = (MemberDto)session.getAttribute("session_member");
     if(loginSession!=null){
     	out.print(
 				"<a>"+
@@ -115,7 +115,7 @@
       <h2>내 프로필</h3>
       <div>
       	<%
-      		out.print("<img id='myPageProfilePicture' src='"+ request.getServletContext().getRealPath("/assets/image") + loginSession.getImageURL() +"' alt='내 프로필 사진'>");
+      		out.print("<img id='myPageProfilePicture' src='"+ request.getServletContext().getRealPath("/assets/image") + loginSession.getProfileImageURL() +"' alt='내 프로필 사진'>");
       	%>
         <form id="myPageProfile" name="myPageProfile" action="profileUploadImage" method="post" enctype="multipart/form-data">
 			    <input name="myPageProfileAttach" id="myPageProfileAttach" type="file">

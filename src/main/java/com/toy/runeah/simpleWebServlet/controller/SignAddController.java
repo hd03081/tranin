@@ -37,8 +37,6 @@ public class SignAddController extends HttpServlet {
 		dao.addMember(memberDto);
 		
 		response.sendRedirect("/runeah/");
-		//RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/index.jsp");
-		//requestDispatcher.forward(request, response);
 	}
 
 }

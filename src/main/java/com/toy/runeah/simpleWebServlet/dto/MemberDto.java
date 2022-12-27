@@ -13,12 +13,28 @@ public class MemberDto {
 	private String statusMessage;//140 status_message
 	private String profileImageURL;//200 profile_image_url
 	public MemberDto() {}
+	//회원가입용 컨스트럭터
 	public MemberDto(String id, String pw, String nickName, String address, String zipCode) {
 		this.id = id;
 		this.pw = pw;
 		this.nickName = nickName;
 		this.address = address;
 		this.zipCode = zipCode;
+	}
+	//로그인 세션용 컨스트럭터
+	public MemberDto(int no, String id, String pw, String nickName, String address, String zipCode, String phone,
+			String accountNo, String accountName, String statusMessage, String profileImageURL) {
+		this.no = no;
+		this.id = id;
+		this.pw = pw;
+		this.nickName = nickName;
+		this.address = address;
+		this.zipCode = zipCode;
+		this.phone = phone;
+		this.accountNo = accountNo;
+		this.accountName = accountName;
+		this.statusMessage = statusMessage;
+		this.profileImageURL = profileImageURL;
 	}
 	public int getNo() {
 		return no;
