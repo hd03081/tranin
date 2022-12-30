@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="java.util.*,java.lang.*,com.toy.runeah.simpleWebServlet.dao.MainDao,com.toy.runeah.simpleWebServlet.dto.MemberDto"%>
-<%@ taglib prefix="c"
-           uri="http://java.sun.com/jstl/core_rt" %>
+    pageEncoding="UTF-8" import="java.util.*,java.lang.*,dao.MainDao,dto.MemberDto"%>
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
 

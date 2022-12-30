@@ -1,4 +1,4 @@
-package com.toy.runeah.simpleWebServlet.dto;
+package dto;
 
 public class MemberDto {
 	private int no;//11 no auto-increment

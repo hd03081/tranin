@@ -23,8 +23,9 @@ myPageProfileNickName.addEventListener('focusout',function(){
 		
 		if(xhr.status === 200){
 			console.log(xhr.response);
-			const json = JSON.parse(xhr.response);
-			myPageProfileIntroduce.value = json;
+			//const json = JSON.parse(xhr.response);
+			//myPageProfileIntroduce.value = json;
+			myPageProfileIntroduce.value = xhr.response;
 		}
 		else {
 			console.error('Error',xhr.status,xhr.statusText);
@@ -40,8 +41,9 @@ myPageProfileIntroduce.addEventListener('focusout',function(){
 		
 		if(xhr.status === 200){
 			console.log(xhr.response);
-			const json = JSON.parse(xhr.response);
-			myPageProfileIntroduce.value = json;
+			//const json = JSON.parse(xhr.response);
+			//myPageProfileIntroduce.value = json;
+			myPageProfileIntroduce.value = xhr.response;
 		}
 		else {
 			console.error('Error',xhr.status,xhr.statusText);

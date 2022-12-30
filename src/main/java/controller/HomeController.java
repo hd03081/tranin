@@ -1,4 +1,4 @@
-package com.toy.runeah.simpleWebServlet.controller;
+package controller;
 
 import java.io.IOException;
 
@@ -9,22 +9,30 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/loginForm")
-public class LoginFormController extends HttpServlet {
+import dao.MainDao;
+
+@WebServlet("")
+public class HomeController extends HttpServlet {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-	public LoginFormController() {
+
+	public HomeController() {
         super();
     }
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, 
+			HttpServletResponse response) 
+					throws ServletException, IOException {
 		
 		response.setCharacterEncoding("utf-8");
 		response.setContentType("text/html");
-		System.out.println("s");
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/login.jsp");
+		
+		MainDao dao = new MainDao();
+		String list = dao.getSomething();
+		System.out.println(list);
+		request.setAttribute("list", list);
+		
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
 		requestDispatcher.forward(request, response);
+		
 	}
 }
